@@ -5,6 +5,9 @@ import GameScreen from './components/GameScreen.jsx'
 import WinScreen from './components/WinScreen.jsx'
 import DeadScreen from './components/DeadScreen.jsx'
 import LeaderboardScreen from './components/LeaderboardScreen.jsx'
+import QuestsScreen from './components/QuestsScreen.jsx'
+import SkinsScreen from './components/SkinsScreen.jsx'
+import SettingsScreen from './components/SettingsScreen.jsx'
 
 export default function App() {
   const [screen, setScreen] = useState(SCREENS.MENU)
@@ -47,6 +50,7 @@ export default function App() {
           <MenuScreen
             onPlay={handlePlay}
             onLeaderboard={() => setScreen(SCREENS.LEADERBOARD)}
+            onNav={(dest) => setScreen(dest)}
           />
         )}
 
@@ -82,6 +86,18 @@ export default function App() {
             onMenu={() => setScreen(SCREENS.MENU)}
             onPlay={handlePlay}
           />
+        )}
+
+        {screen === SCREENS.QUESTS && (
+          <QuestsScreen onMenu={() => setScreen(SCREENS.MENU)} />
+        )}
+
+        {screen === SCREENS.SKINS && (
+          <SkinsScreen onMenu={() => setScreen(SCREENS.MENU)} />
+        )}
+
+        {screen === SCREENS.SETTINGS && (
+          <SettingsScreen onMenu={() => setScreen(SCREENS.MENU)} />
         )}
       </div>
     </div>

@@ -1,8 +1,9 @@
 export const CANVAS_WIDTH = 1280
 export const CANVAS_HEIGHT = 640
 
-export const GRAVITY = 0.38
-export const JUMP_FORCE = -14
+export const GRAVITY = 0.46
+export const JUMP_FORCE = -12       // קפיצה רגילה ~156px
+export const BOOST_JUMP_FORCE = -18  // קפיצה מגב שותף ~352px
 export const MOVE_SPEED = 5
 
 export const UNICORN = {
@@ -41,4 +42,7 @@ export const SCREENS = {
   GAMEOVER: 'gameover',
   WIN: 'win',
   LEADERBOARD: 'leaderboard',
+  QUESTS: 'quests',
+  SKINS: 'skins',
+  SETTINGS: 'settings',
 }
