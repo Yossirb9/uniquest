@@ -1,12 +1,10 @@
 import { GRAVITY, JUMP_FORCE, MOVE_SPEED, COLORS, UNICORN, CANVAS_WIDTH, CANVAS_HEIGHT } from './constants.js'
-import { LEVELS } from './levels.js'
 
 export class GameEngine {
-  constructor(canvas, levelIndex = 0) {
+  constructor(canvas, level) {
     this.canvas = canvas
     this.ctx = canvas.getContext('2d')
-    this.levelIndex = levelIndex
-    this.level = LEVELS[levelIndex]
+    this.level = level
     this.keys = {}
     this.gems = this.level.gems.map((g, i) => ({ ...g, id: i, collected: false }))
     this.movingPlatforms = this.level.movingPlatforms.map(p => ({ ...p }))
