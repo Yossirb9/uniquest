@@ -1,7 +1,7 @@
 export const CANVAS_WIDTH = 1280
 export const CANVAS_HEIGHT = 640
 
-export const GRAVITY = 0.45
+export const GRAVITY = 0.38
 export const JUMP_FORCE = -14
 export const MOVE_SPEED = 5
 
